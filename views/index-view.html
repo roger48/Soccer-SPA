@@ -1,0 +1,37 @@
+   <div class="container">
+    <div class="row setting_width">
+      <select class="dropdown_width" ng-model="selectedYear" ng-options="x for x in year" ng-change="selectYear()"></select>
+     <div>                     
+      <h1>{{array.name}}</h1>
+
+      <div ng-repeat="round in array.rounds">
+        <h3>{{round.name}}</h3>
+        <div class="row setting_width">
+        <div class="table-responsive">
+            <table class="table table-hover" >
+            <tr>
+              <th>Date</th>
+              <th>Team </th>
+               <th>Score </th>
+               <th></th>
+              <th>Score </th>
+              <th>Team </th>
+            
+            </tr>
+            <tr ng-repeat="match in round.matches">
+              <td>{{ match.date | date :'longDate'}}</td>
+              <td>{{ match.team1.name }}</td>
+              <td>{{ match.score1 }}</td>
+              <td>-</td>
+              <td>{{ match.score2 }}</td>
+              <td>{{ match.team2.name }}</td>   
+            </tr>
+          </table>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+

@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <select class="dropdown_width" ng-model="selectedYear" ng-options="x for x in year" ng-change="selectYear()"></select>
+    <div class="row setting_width">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover" >
+                    <tr>
+                        <th>No. of Teams</th>
+                        <th>Team Name</th>
+                        <th>Matches Played</th>
+                        <th>Matches Won</th>
+                        <th>Matches Lost</th>
+                        <th>Matches Draw</th>
+                        <th>Total Goals</th>
+                        <th>Goals Against</th>
+                    </tr>
+                <tbody>
+                    <tr ng-repeat="x in teamStats">
+                        <td>{{$index + 1}}</td>
+                        <td>{{x.teamname}}</td>
+                        <td>{{x.played}}</td>
+                        <td>{{x.Won}}</td>
+                        <td>{{x.Lost}}</td>
+                        <td>{{x.Drawn}}</td>
+                        <td>{{x.goalsScored}}</td>
+                        <td>{{x.goalsAgainst}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
